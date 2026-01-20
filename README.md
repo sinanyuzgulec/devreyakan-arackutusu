@@ -8,7 +8,7 @@
 
 ## Hakkında
 
-**devreyakan Araç Kutusu v2**, günlük elektronik tasarım ve geliştirme süreçlerinde ihtiyaç duyulan hesaplamaları, simülasyonları ve donanım araçlarını tek bir çatı altında toplayan modüler bir uygulamadır.
+**devreyakan Araç Kutusu (OSE)**, günlük elektronik tasarım ve geliştirme süreçlerinde ihtiyaç duyulan hesaplamaları, simülasyonları ve donanım araçlarını tek bir çatı altında toplayan modüler bir uygulamadır.
 
 **PyQt6** ile geliştirilen bu sürüm, **Modüler Eklenti Mimarisi (Tool Manager)** sayesinde, ana çekirdeğe dokunmadan yeni araçların kolayca eklenmesine ve güncellenmesine olanak tanır.
 
