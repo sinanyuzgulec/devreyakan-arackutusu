@@ -1,4 +1,4 @@
-# devreyakan Araç Kutusu (OSE) v 0.0.1
+# devreyakan Araç Kutusu (OSE) v 0.0.2
 
 **Elektronik mühendisleri, makerlar ve gömülü sistem geliştiricileri için hepsi bir arada açık kaynaklı masaüstü yardımcı yazılımı.**
 
@@ -14,25 +14,43 @@
 
 ##  Özellikler ve Araçlar
 
-Proje şu an aşağıdaki modülleri ve araçları içermektedir:
+Proje **31+ modüler araç** içermektedir. Aşağıtta kategori bazında araçlar listelenmiştir:
 
-### Donanım ve Gömülü Sistem Araçları
-* **Hex Uploader:** `avrdude` altyapısını kullanarak AVR tabanlı kartlara (Arduino vb.) derlenmiş hex dosyalarını yükler.
-* **Serial Tool:** `pySerial` altyapısını kullanarak seri port iletişimi ve debug arayüzü.
-* **ESP Tool:** `esptool` altyapısını kullanarak Espressif çipleri için yardımcı araçlar.
-* **Checksum & Bit Tool:** Veri bütünlüğü doğrulama ve bit manipülasyon işlemleri.
+### 📊 Tüm Araçlar
 
-###  Simülasyon ve Analiz
-* **Circuit Sim:** NumPy tabanlı, Netlist parse edebilen Nodal Analiz (Düğüm Gerilimi) yöntemini kullanan hafif devre simülatörü.
-* **Filter Tool:** Aktif ve pasif filtre tasarımları.
-* **PID Tool:** Kontrol sistemleri için PID katsayı hesaplayıcı.
-
-### Hesaplayıcılar
-* **Komponentler:** Direnç (Renk kodları/SMD), Kapasitör, İndüktör (Coil), NTC, LED.
-* **Güç:** Voltaj Regülatörü, Pil Ömrü (Battery Tool).
-* **Analog:** OpAmp devreleri, ADC çözünürlük hesapları.
-* **RF & Haberleşme:** RF Anten hesapları, QTH (Locator) dönüştürücü.
-* **Diğer:** Kablo kesit hesapları, PCB iz genişliği hesaplayıcı, Base Converter (Taban çevirici).
+| # | Araç Adı | Kategori | Açıklama |
+|---|----------|----------|----------|
+| 1 | **ADC Adım Hesaplayıcı** | Analog | ADC çözünürlük ve dijital değer hesaplamaları |
+| 2 | **Op-Amp Kazanç Hesaplayıcı** | Analog | Operasyonel amplifikatör kazanç ve devreleri |
+| 3 | **Taban Dönüştürücü** | Matematik | Sayısal sistemler arası dönüşüm (2, 8, 10, 16) |
+| 4 | **Pil Ömrü Aracı** | Güç | Pil kapasitesi ve çalışma süresi hesaplamaları |
+| 5 | **LM317 Regülatör Hesaplayıcı** | Güç | Voltaj regülatörü tasarımı ve hesapları |
+| 6 | **Seri Port İzleyici** | Gömülü Sistem | Seri port iletişimi ve debug arayüzü |
+| 7 | **ESP Tool** | Gömülü Sistem | Espressif çipleri için yardımcı araçlar |
+| 8 | **Hex Uploader** | Gömülü Sistem | AVR karalar için hex dosyası yükleme (avrdude) |
+| 9 | **Struct Bitfield Analizcisi** | Veri | Bitfield ve maskeleme işlemleri |
+| 10 | **Struct Analizcisi** | Veri | Veri yapısı analizi ve boyut hesaplamaları |
+| 11 | **Bobin Hesaplayıcı** | Komponent | İndüktör (Coil) hesaplamaları |
+| 12 | **LED Direnç Hesaplayıcı** | Komponent | LED seri direnç ve güç hesapları |
+| 13 | **NTC Termistör Hesaplayıcı** | Komponent | NTC sıcaklık sensörü hesaplamaları |
+| 14 | **Direnç Renk Bulucu** | Komponent | Direnç renk kodları ve SMD değerleri |
+| 15 | **SMD Kod Bulucu** | Komponent | SMD bileşen kodları ve değerleri |
+| 16 | **LCD Karakter Çizici** | Komponent | LCD display karakter sürücü |
+| 17 | **Ohm Yasası Hesaplayıcı** | Elektrik | Voltaj, akım, direnç ve güç hesaplamaları |
+| 18 | **Kablo Kesit Hesaplayıcı** | Elektrik | Kablo çapı ve kesit alanı hesapları |
+| 19 | **Devre Simülatörü** | Simülasyon | NumPy tabanlı Nodal Analiz devre simülasyonu |
+| 20 | **RC Filtre Tasarımcısı** | Simülasyon | Aktif/pasif RC filtre tasarımı |
+| 21 | **PID Kontrolcü Hesaplayıcı** | Kontrol | PID katsayı ve sistem yanıt hesaplamaları |
+| 22 | **PCB Yol Genişliği Hesaplayıcı** | Tasarım | PCB iz akım taşıma kapasitesi |
+| 23 | **RF Anten Hesaplayıcı** | RF | RF anten boyutu ve frekans hesapları |
+| 24 | **QTH Locator Dönüştürücü** | RF | Koordinat ve QTH locator dönüşümü |
+| 25 | **Soğutucu Seçim Aracı** | Isı Yönetimi | Termal direnç ve heat sink seçimi |
+| 26 | **Mekanik Rezonans Tarayıcı** | Mekanik | Doğal frekans ve sönümleme analizi |
+| 27 | **Euler Kolon Analizi** | Mekanik | Kritik yük ve yapısal stabilite |
+| 28 | **Dişli Oranı Hesaplayıcı** | Mekanik | Dişli oranı, torque ve güç hesabı |
+| 29 | **555 Zamanlayıcı Hesaplayıcı** | Elektronik | 555 timer frekans ve görev döngüsü |
+| 30 | **Sistem Araçları** | Sistem | Sistem bilgileri ve konfigürasyon |
+| 31 | **Veri Bütünlüğü Aracı** | Veri | Checksum ve veri doğrulama |
 
 
 
