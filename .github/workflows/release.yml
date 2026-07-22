@@ -27,8 +27,17 @@ jobs:
       - name: Build DEB Package
         run: ./build_deb.sh
 
+      - name: Install AppImage dependencies
+        run: |
+          sudo apt update
+          sudo apt install -p fuse libfuse2 wget -y || true
+
       - name: Build AppImage Package
-        run: ./build_appimage.sh || true
+        run: |
+          wget -q https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage -O appimagetool
+          chmod +x appimagetool
+          ./appimagetool --appimage-extract
+          ./build_appimage.sh || true
 
       - name: Create Release & Upload Linux Artifacts
         uses: softprops/action-gh-release@v1

@@ -41,15 +41,17 @@ EOF
 # Gecici icon
 touch "$APP_DIR/icon.png"
 
-# appimagetool indirip derle (yoksa)
-if ! command -v appimagetool >/dev/null 2>&1; then
+# appimagetool derle/çalıştır
+if [ -d "squashfs-root" ]; then
+    ARCH=x86_64 ./squashfs-root/AppRun "$APP_DIR" "$OUTPUT_APPIMAGE"
+elif command -v appimagetool >/dev/null 2>&1; then
+    ARCH=x86_64 appimagetool "$APP_DIR" "$OUTPUT_APPIMAGE"
+else
     echo "Downloading appimagetool..."
     wget -q https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage -O appimagetool
     chmod +x appimagetool
-    ARCH=x86_64 ./appimagetool "$APP_DIR" "$OUTPUT_APPIMAGE"
-    rm -f appimagetool
-else
-    ARCH=x86_64 appimagetool "$APP_DIR" "$OUTPUT_APPIMAGE"
+    ./appimagetool --appimage-extract
+    ARCH=x86_64 ./squashfs-root/AppRun "$APP_DIR" "$OUTPUT_APPIMAGE"
 fi
 
 rm -rf "$APP_DIR"
