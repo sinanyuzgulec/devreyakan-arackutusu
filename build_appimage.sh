@@ -42,16 +42,17 @@ EOF
 touch "$APP_DIR/icon.png"
 
 # appimagetool derle/çalıştır
-if [ -d "squashfs-root" ]; then
-    ARCH=x86_64 ./squashfs-root/AppRun "$APP_DIR" "$OUTPUT_APPIMAGE"
-elif command -v appimagetool >/dev/null 2>&1; then
-    ARCH=x86_64 appimagetool "$APP_DIR" "$OUTPUT_APPIMAGE"
-else
+if [ ! -f "appimagetool" ]; then
     echo "Downloading appimagetool..."
-    curl -sL "https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage" -o appimagetool
-    chmod +x appimagetool
-    ./appimagetool --appimage-extract
-    ARCH=x86_64 ./squashfs-root/AppRun "$APP_DIR" "$OUTPUT_APPIMAGE"
+    curl -sLO "https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage" || true
+    chmod +x appimagetool 2>/dev/null || true
+fi
+
+if [ -f "appimagetool" ]; then
+    ./appimagetool --appimage-extract 2>/dev/null || true
+    if [ -d "squashfs-root" ]; then
+        ARCH=x86_64 ./squashfs-root/AppRun "$APP_DIR" "$OUTPUT_APPIMAGE" || true
+    fi
 fi
 
 rm -rf "$APP_DIR"
