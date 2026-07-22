@@ -6,7 +6,8 @@ on:
       - 'v*'
 
 jobs:
-  build-deb-and-appimage:
+  build-all:
+    name: Build All Artifacts
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -19,6 +20,14 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Build Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libfuse2 wget
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
       - name: Make Build Scripts Executable
         run: |
           chmod +x build_deb.sh
@@ -27,53 +36,24 @@ jobs:
       - name: Build DEB Package
         run: ./build_deb.sh
 
-      - name: Install AppImage dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libfuse2 wget
-
       - name: Build AppImage Package
         run: |
           wget -q https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage -O appimagetool
           chmod +x appimagetool
           ./appimagetool --appimage-extract
-          ./build_appimage.sh || true
+          ARCH=x86_64 ./squashfs-root/AppRun AppDir devreyakan-arackutusu_${GITHUB_REF_NAME}-x86_64.AppImage || true
 
-      - name: Create Release & Upload Linux Artifacts
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            devreyakan-arackutusu_*.deb
-            *.AppImage
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  build-windows-exe:
-    runs-on: windows-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install Dependencies & PyInstaller
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pyinstaller
-
-      - name: Build Windows Binary with PyInstaller
+      - name: Build Executable with PyInstaller
         run: |
           pyinstaller app.spec
 
-      - name: Upload Windows Executable to Release
+      - name: Create Single Unified Release
         uses: softprops/action-gh-release@v1
         with:
-          files: dist/devreyakan-arackutusu.exe
+          files: |
+            *.deb
+            *.AppImage
+            dist/devreyakan-arackutusu.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
