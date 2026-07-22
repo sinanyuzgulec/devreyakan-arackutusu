@@ -595,5 +595,24 @@
     "baudwidget_ubrr_divider": "Divider Value (UBRR):",
     "baudwidget_error_percent": "Error Percentage:",
     "baudwidget_status": "Status:",
-    "baudwidget_input_error": "Error: Invalid clock frequency or baud rate input."
+    "baudwidget_input_error": "Error: Invalid clock frequency or baud rate input.",
+
+    "crcwidget_tool_name": "CRC Calculator",
+    "crcwidget_input_data": "Input Data:",
+    "crcwidget_input_type": "Input Type:",
+    "crcwidget_algorithm": "CRC Algorithm:",
+    "crcwidget_calculate_button": "Calculate CRC",
+    "crcwidget_result_label": "CRC Result:",
+    "crcwidget_error_empty": "Error: Please enter data.",
+    "crcwidget_error_hex": "Error: Invalid HEX data format.",
+
+    "unitwidget_tool_name": "Comprehensive Unit Converter",
+    "unitwidget_value": "Value:",
+    "unitwidget_category": "Category:",
+    "unitwidget_from_unit": "From Unit:",
+    "unitwidget_to_unit": "To Unit:",
+    "unitwidget_convert_button": "Convert",
+    "unitwidget_result_label": "Result:",
+    "unitwidget_error_input": "Error: Invalid numerical value.",
+    "unitwidget_error_invalid": "Error: Conversion failed."
 }

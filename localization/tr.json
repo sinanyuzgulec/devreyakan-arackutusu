@@ -595,5 +595,24 @@
     "baudwidget_ubrr_divider": "Bölücü Değeri (UBRR):",
     "baudwidget_error_percent": "Hata Yüzdesi:",
     "baudwidget_status": "Durum:",
-    "baudwidget_input_error": "Hata: Geçersiz frekans veya baud rate girişi."
+    "baudwidget_input_error": "Hata: Geçersiz frekans veya baud rate girişi.",
+
+    "crcwidget_tool_name": "CRC Hesaplayıcı",
+    "crcwidget_input_data": "Giriş Verisi:",
+    "crcwidget_input_type": "Giriş Tipi:",
+    "crcwidget_algorithm": "CRC Algoritması:",
+    "crcwidget_calculate_button": "CRC Hesapla",
+    "crcwidget_result_label": "CRC Sonucu:",
+    "crcwidget_error_empty": "Hata: Lütfen veri girin.",
+    "crcwidget_error_hex": "Hata: Geçersiz HEX verisi formatı.",
+
+    "unitwidget_tool_name": "Kapsamlı Birim Dönüştürücü",
+    "unitwidget_value": "Değer:",
+    "unitwidget_category": "Kategori:",
+    "unitwidget_from_unit": "Kaynak Birim:",
+    "unitwidget_to_unit": "Hedef Birim:",
+    "unitwidget_convert_button": "Dönüştür",
+    "unitwidget_result_label": "Sonuç:",
+    "unitwidget_error_input": "Hata: Geçersiz sayısal değer.",
+    "unitwidget_error_invalid": "Hata: Dönüştürme gerçekleştirilemedi."
 }

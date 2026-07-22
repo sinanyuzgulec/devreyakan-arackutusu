@@ -14,7 +14,7 @@
 
 ##  Özellikler ve Araçlar
 
-Proje **32+ modüler araç** içermektedir. Aşağıda kategori bazında araçlar listelenmiştir:
+Proje **34+ modüler araç** içermektedir. Aşağıda kategori bazında araçlar listelenmiştir:
 
 ### 📊 Tüm Araçlar
 
@@ -52,6 +52,8 @@ Proje **32+ modüler araç** içermektedir. Aşağıda kategori bazında araçla
 | 30 | **Sistem Araçları** | Sistem | Sistem bilgileri ve konfigürasyon |
 | 31 | **Veri Bütünlüğü Aracı** | Veri | Checksum ve veri doğrulama |
 | 32 | **Baud Rate Hata Hesaplayıcı** | Gömülü Sistem | Seri iletişim (UART) baud rate ve frekans sapması hesaplama |
+| 33 | **CRC Hesaplayıcı** | Veri / Gömülü | CRC-8, CRC-16 (Modbus, CCITT) ve CRC-32 hesaplama |
+| 34 | **Kapsamlı Birim Dönüştürücü** | Matematik / RF | Güç/RF (W, dBm), Frekans, Sıcaklık, Kapasitans ve Endüktans dönüşümleri |
 
 
 

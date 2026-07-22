@@ -30,5 +30,7 @@
     "system_tool": "8b20be51badb41e7ad36dbc6b88f4021bbdcef21b37d83c3f123e4840b54bc6a",
     "timer555_tool": "76cb62690cf0d7e83dc8bb8abfe7e7c9714aafc93760f512cfe3b1ffc9537b0d",
     "uploader_tool": "d377bc67c202ff21b132f41a4175bd426ff3bed959225b5052deda27d4899c6f",
-    "baud_rate_tool": "619246de7b8b5ccf3d91ef2744a9170cc5441983891bc77dab6d78f6a81fa926"
+    "baud_rate_tool": "619246de7b8b5ccf3d91ef2744a9170cc5441983891bc77dab6d78f6a81fa926",
+    "crc_tool": "11443092d9fdd785ad3758fef3753cc00d5b53b60d1065d4d1e95c3aa47bf0c1",
+    "unit_converter_tool": "fef8ee493a84d6e30d9e1c6fe4644a53ac1006d765ca319492d25b817d59fc95"
 }
