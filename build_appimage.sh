@@ -48,7 +48,7 @@ elif command -v appimagetool >/dev/null 2>&1; then
     ARCH=x86_64 appimagetool "$APP_DIR" "$OUTPUT_APPIMAGE"
 else
     echo "Downloading appimagetool..."
-    wget -q https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage -O appimagetool
+    curl -sL "https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage" -o appimagetool
     chmod +x appimagetool
     ./appimagetool --appimage-extract
     ARCH=x86_64 ./squashfs-root/AppRun "$APP_DIR" "$OUTPUT_APPIMAGE"
