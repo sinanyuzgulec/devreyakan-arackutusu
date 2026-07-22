@@ -32,5 +32,8 @@
     "uploader_tool": "d377bc67c202ff21b132f41a4175bd426ff3bed959225b5052deda27d4899c6f",
     "baud_rate_tool": "619246de7b8b5ccf3d91ef2744a9170cc5441983891bc77dab6d78f6a81fa926",
     "crc_tool": "11443092d9fdd785ad3758fef3753cc00d5b53b60d1065d4d1e95c3aa47bf0c1",
-    "unit_converter_tool": "fef8ee493a84d6e30d9e1c6fe4644a53ac1006d765ca319492d25b817d59fc95"
+    "unit_converter_tool": "fef8ee493a84d6e30d9e1c6fe4644a53ac1006d765ca319492d25b817d59fc95",
+    "dcdc_converter_tool": "ee3ed2ff6adec76430e4a34c4b36c7cf7bd5242c5646e997b08b63e0cdba8e8b",
+    "i2c_pullup_tool": "5a9685c76d47c13b9265fbe4f249095eb9967733d6a35cc8179868b1bea9c4cc",
+    "color_space_tool": "a58266e019635690f3561d38fb05bbfc9026165c3e6e08e33f645b0af818aa0f"
 }

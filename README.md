@@ -14,7 +14,7 @@
 
 ##  Özellikler ve Araçlar
 
-Proje **34+ modüler araç** içermektedir. Aşağıda kategori bazında araçlar listelenmiştir:
+Proje **37+ modüler araç** içermektedir. Aşağıda kategori bazında araçlar listelenmiştir:
 
 ### 📊 Tüm Araçlar
 
@@ -54,6 +54,9 @@ Proje **34+ modüler araç** içermektedir. Aşağıda kategori bazında araçla
 | 32 | **Baud Rate Hata Hesaplayıcı** | Gömülü Sistem | Seri iletişim (UART) baud rate ve frekans sapması hesaplama |
 | 33 | **CRC Hesaplayıcı** | Veri / Gömülü | CRC-8, CRC-16 (Modbus, CCITT) ve CRC-32 hesaplama |
 | 34 | **Kapsamlı Birim Dönüştürücü** | Matematik / RF | Güç/RF (W, dBm), Frekans, Sıcaklık, Kapasitans ve Endüktans dönüşümleri |
+| 35 | **DC-DC Konvertör Tasarımcısı** | Elektronik / Devre | Buck ve Boost DC-DC dönüştürücü indüktör, kapasitör ve duty cycle hesabı |
+| 36 | **I2C Pull-Up Direnç Hesaplayıcı** | Gömülü Sistem | Hat kapasitansı ve frekansa göre min/max/önerilen pull-up direnç hesabı |
+| 37 | **Renk Uzayı & RGB565 Dönüştürücü** | Veri / Gömülü | RGB888, RGB565 (16-bit TFT ekranlar), HSV ve CMYK dönüşümü |
 
 
 
