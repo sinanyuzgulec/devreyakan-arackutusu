@@ -1,0 +1,26 @@
+name: Release and Build Packages
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-deb:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Make Build Script Executable
+        run: chmod +x build_deb.sh
+
+      - name: Build DEB Package
+        run: ./build_deb.sh
+
+      - name: Create Release & Upload DEB
+        uses: softprops/action-gh-release@v1
+        with:
+          files: devreyakan-arackutusu_*.deb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
