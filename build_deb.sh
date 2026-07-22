@@ -28,7 +28,7 @@ cat <<EOF > "$BUILD_DIR/DEBIAN/control"
 Package: $PKG_NAME
 Version: $VERSION
 Architecture: $ARCH
-Maintainer: Sinan Yüzgüleç <email@adresiniz.com>
+Maintainer: Sinan Yüzgüleç
 Depends: python3, python3-pyqt6, python3-numpy, python3-serial
 Section: utils
 Priority: optional
