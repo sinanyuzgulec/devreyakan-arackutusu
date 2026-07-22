@@ -1,8 +1,8 @@
-# devreyakan Araç Kutusu (OSE) v 0.0.2
+# devreyakan Araç Kutusu (OSE) v0.0.9
 
 **Elektronik mühendisleri, makerlar ve gömülü sistem geliştiricileri için hepsi bir arada açık kaynaklı masaüstü yardımcı yazılımı.**
 
-![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)
+![Version](https://img.shields.io/badge/version-0.0.9-blue.svg)
 ![Python](https://img.shields.io/badge/Python-3.11%2B-yellow.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
