@@ -6,7 +6,9 @@
 set -e
 
 PKG_NAME="devreyakan-arackutusu"
-VERSION="0.0.2"
+VERSION="${RELEASE_VERSION:-0.0.3}"
+# Baştaki 'v' harfini kaldır (v0.0.3 -> 0.0.3)
+VERSION="${VERSION#v}"
 ARCH="all"
 BUILD_DIR="build_deb"
 OUTPUT_DEB="${PKG_NAME}_${VERSION}_${ARCH}.deb"
