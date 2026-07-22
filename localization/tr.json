@@ -583,5 +583,17 @@
     "gear_power_loss": "Güç Kaybı (W):",
     "gear_result_success": "Dişli Oranı: {ratio:.4f}\nÇıkış Hızı: {speed:.2f} rpm\nÇıkış Torku: {torque:.4f} Nm\nGüç Kaybı: {loss:.2f} W",
     "gear_error": "Lütfen geçerli sayısal değerler girin.",
-    "gear_error_invalid": "Hata: Geçersiz parametreler!"
+    "gear_error_invalid": "Hata: Geçersiz parametreler!",
+
+    "baudwidget_tool_name": "Baud Rate Hata Hesaplayıcı",
+    "baudwidget_clock_freq": "Sistem Saati (F_CPU) (Hz):",
+    "baudwidget_target_baud": "Hedef Baud Rate:",
+    "baudwidget_oversampling": "Örnekleme Oranı (Oversampling):",
+    "baudwidget_calculate_button": "Hesapla",
+    "baudwidget_result_label": "Sonuçlar:",
+    "baudwidget_actual_baud": "Gerçekleşen Baud Rate:",
+    "baudwidget_ubrr_divider": "Bölücü Değeri (UBRR):",
+    "baudwidget_error_percent": "Hata Yüzdesi:",
+    "baudwidget_status": "Durum:",
+    "baudwidget_input_error": "Hata: Geçersiz frekans veya baud rate girişi."
 }

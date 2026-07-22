@@ -583,5 +583,17 @@
     "gear_power_loss": "Power Loss (W):",
     "gear_result_success": "Gear Ratio: {ratio:.4f}\nOutput Speed: {speed:.2f} rpm\nOutput Torque: {torque:.4f} Nm\nPower Loss: {loss:.2f} W",
     "gear_error": "Please enter valid numerical values.",
-    "gear_error_invalid": "Error: Invalid parameters!"
+    "gear_error_invalid": "Error: Invalid parameters!",
+
+    "baudwidget_tool_name": "Baud Rate Error Calculator",
+    "baudwidget_clock_freq": "System Clock (F_CPU) (Hz):",
+    "baudwidget_target_baud": "Target Baud Rate:",
+    "baudwidget_oversampling": "Oversampling Rate:",
+    "baudwidget_calculate_button": "Calculate",
+    "baudwidget_result_label": "Results:",
+    "baudwidget_actual_baud": "Actual Baud Rate:",
+    "baudwidget_ubrr_divider": "Divider Value (UBRR):",
+    "baudwidget_error_percent": "Error Percentage:",
+    "baudwidget_status": "Status:",
+    "baudwidget_input_error": "Error: Invalid clock frequency or baud rate input."
 }

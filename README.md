@@ -14,7 +14,7 @@
 
 ##  Özellikler ve Araçlar
 
-Proje **31+ modüler araç** içermektedir. Aşağıtta kategori bazında araçlar listelenmiştir:
+Proje **32+ modüler araç** içermektedir. Aşağıda kategori bazında araçlar listelenmiştir:
 
 ### 📊 Tüm Araçlar
 
@@ -51,6 +51,7 @@ Proje **31+ modüler araç** içermektedir. Aşağıtta kategori bazında araçl
 | 29 | **555 Zamanlayıcı Hesaplayıcı** | Elektronik | 555 timer frekans ve görev döngüsü |
 | 30 | **Sistem Araçları** | Sistem | Sistem bilgileri ve konfigürasyon |
 | 31 | **Veri Bütünlüğü Aracı** | Veri | Checksum ve veri doğrulama |
+| 32 | **Baud Rate Hata Hesaplayıcı** | Gömülü Sistem | Seri iletişim (UART) baud rate ve frekans sapması hesaplama |
 
 
 
