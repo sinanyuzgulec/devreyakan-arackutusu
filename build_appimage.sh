@@ -55,5 +55,5 @@ if [ -f "appimagetool" ]; then
     fi
 fi
 
-rm -rf "$APP_DIR"
+rm -rf "$APP_DIR" squashfs-root appimagetool
 echo "AppImage created: $OUTPUT_APPIMAGE"
