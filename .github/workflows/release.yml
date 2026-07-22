@@ -1,4 +1,4 @@
-name: Release and Build Packages
+name: Release and Build Multi-Platform Packages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 jobs:
-  build-deb:
+  build-deb-and-appimage:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -14,15 +14,57 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Make Build Script Executable
-        run: chmod +x build_deb.sh
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Make Build Scripts Executable
+        run: |
+          chmod +x build_deb.sh
+          chmod +x build_appimage.sh
 
       - name: Build DEB Package
         run: ./build_deb.sh
 
-      - name: Create Release & Upload DEB
+      - name: Build AppImage Package
+        run: ./build_appimage.sh || true
+
+      - name: Create Release & Upload Linux Artifacts
         uses: softprops/action-gh-release@v1
         with:
-          files: devreyakan-arackutusu_*.deb
+          files: |
+            devreyakan-arackutusu_*.deb
+            *.AppImage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build-windows-exe:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies & PyInstaller
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build Windows Binary with PyInstaller
+        run: |
+          pyinstaller app.spec
+
+      - name: Upload Windows Executable to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/devreyakan-arackutusu.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

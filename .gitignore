@@ -26,12 +26,16 @@ include/
 dist/
 build/
 *.egg-info/
-*.spec
 *.log
 *.sqlite
 *.db
 
 # Debian / Package Build Artifacts
 build_deb/
+AppDir/
+dist/
 *.deb
+*.AppImage
+*.exe
+
 
