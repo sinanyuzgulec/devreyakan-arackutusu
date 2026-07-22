@@ -30,3 +30,8 @@ build/
 *.log
 *.sqlite
 *.db
+
+# Debian / Package Build Artifacts
+build_deb/
+*.deb
+
